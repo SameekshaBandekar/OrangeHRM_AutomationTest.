@@ -76,7 +76,7 @@ OrangeHRMAutomation/
 **	Steps to Execute**
 
 1.	Clone the repository:
-git clone <https://github.com/SameekshaBandekar/OrangeHRMAutomation.git>
+git clone < https://github.com/SameekshaBandekar/OrangeHRM_AutomationTest..git>
 2.	Navigate to the project directory:
 cd OrangeHRMAutomation
 3.	Run tests using Maven:
