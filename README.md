@@ -15,7 +15,7 @@ OrangeHRMAutomation/
 
 ├─ src/test/java/            # orangeHRMTests, #TestComponents
 
-├─ testng.xml                # OrangeHRMTestNG suite configuration
+├─ testng.xml                # OrangeHRMSuite configuration
 
 ├─ pom.xml                   # Maven project file
 
