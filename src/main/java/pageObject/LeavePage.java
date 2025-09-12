@@ -44,9 +44,18 @@ public class LeavePage {
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement saveBtn;
 
+	@FindBy(xpath="//p[@class='oxd-text oxd-text--p oxd-text--subtitle-2']")
+	private WebElement NoLeaveBalanceMessage;
+
 	public void selectLeaveOption() {
 		wait.waitForVisibility(applyTab);
 		applyTab.click();
+	}
+
+	public String getNoLeaveBalanceMessage()
+	{
+		wait.waitForVisibility(NoLeaveBalanceMessage);
+		return NoLeaveBalanceMessage.getText();
 	}
 
 	public void applyLeave(String optionText, String from, String to, String comment) throws InterruptedException {
