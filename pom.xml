@@ -71,6 +71,7 @@
                 <version>3.3.0</version>
                 <configuration>
                     <suiteXmlFiles>
+                  <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                         <suiteXmlFile>OrangeHRMSuite/positiveSuite.xml</suiteXmlFile>
                         <suiteXmlFile>OrangeHRMSuite/negativeSuite.xml</suiteXmlFile>
                         <suiteXmlFile>OrangeHRMSuite/parallel.xml</suiteXmlFile>
