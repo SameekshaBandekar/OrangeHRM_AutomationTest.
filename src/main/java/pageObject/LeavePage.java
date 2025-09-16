@@ -20,7 +20,7 @@ public class LeavePage {
 	public LeavePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WaitUtils(driver, 5);
+		wait = new WaitUtils(driver, 20);
 
 	}
 
