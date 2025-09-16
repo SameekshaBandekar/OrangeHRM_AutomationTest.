@@ -15,7 +15,7 @@ public class EmployeeEditTest extends BaseTest {
 
 	public Object[][] getData() {
 		return new Object[][] { 
-			{ "Admin", "admin123", "Jennifer", "Daisy", "Female"}}; 
+			{ "Admin", "admin123", "Emily", "Divs", "Female"}}; 
 		    
 	}
 
