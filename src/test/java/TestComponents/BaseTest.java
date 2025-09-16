@@ -37,9 +37,10 @@ public class BaseTest {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			// options.addArguments("--headless=new"); // Headless for Jenkins
-			// options.addArguments("--no-sandbox");
-			// options.addArguments("--disable-dev-shm-usage");
+			 options.addArguments("--headless=new"); // Headless for Jenkins
+			 options.addArguments("--no-sandbox");
+			 options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--window-size=1920,1080");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);
 
@@ -51,7 +52,7 @@ public class BaseTest {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 
 		return driver;
 	}
