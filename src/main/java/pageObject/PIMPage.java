@@ -17,7 +17,7 @@ public class PIMPage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WaitUtils(driver, 5);
+		wait = new WaitUtils(driver, 20);
 	}
 
 	@FindBy(xpath = "//label[text()='Employee Name']/following::input[1]")
