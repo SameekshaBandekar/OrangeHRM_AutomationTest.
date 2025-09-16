@@ -19,6 +19,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.Dimension;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObject.LoginPage;
