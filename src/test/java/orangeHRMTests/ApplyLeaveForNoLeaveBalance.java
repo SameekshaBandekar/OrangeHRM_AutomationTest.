@@ -18,9 +18,9 @@ public class ApplyLeaveForNoLeaveBalance extends BaseTest {
 	       
 		 LeavePage leavePage =   dashboard.goToLeaveMenu();
 		 leavePage.selectLeaveOption();
-	        // Apply Leave
-	        
-	        leavePage.applyLeave("CAN - Vacation", "2025-09-10", "2025-09-12", "Family function leave");
+	    String message1 = leavePage.getNoLeaveBalanceMessage();
+		System.out.println(message1);
+		Assert.assertEquals(message1, "No Leave Types with Leave Balance", "No Leave Balance");;
 	    }
 	}
 
