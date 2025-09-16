@@ -35,7 +35,21 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\GlobalData.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+		
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
+		//prop.getProperty("browser");
+
+		if (browserName.contains("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			WebDriverManager.chromedriver().setup();
+			if(browserName.contains("headless")){
+			options.addArguments("--headless");		
+			driver = new ChromeDriver(options);
+			}
+			driver = new ChromeDriver();
+			//driver.manage().window().setSize(new Dimension(1440,900));//full screen
+			
+	/*	String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			 options.addArguments("--headless=new"); // Headless for Jenkins
@@ -43,7 +57,7 @@ public class BaseTest {
 			 options.addArguments("--disable-dev-shm-usage");
 			options.addArguments("--window-size=1920,1080");
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver(options); */
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
