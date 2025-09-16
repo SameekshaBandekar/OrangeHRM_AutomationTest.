@@ -15,7 +15,7 @@ public class LoginPage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WaitUtils(driver, 5);
+		wait = new WaitUtils(driver, 20);
 	}
 
 	@FindBy(css = "input[name='username']")
